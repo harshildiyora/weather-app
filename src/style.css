@@ -1,0 +1,37 @@
+/* Importing google fonts - Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+
+/* apply more classes in one class name */
+.city-country-li {
+    @apply bg-white/50 list-none py-[5px] px-[10px] cursor-pointer backdrop-blur-[18px] hover:bg-white
+}
+.city {
+    @apply font-semibold text-[0.95rem];
+}
+
+.country {
+    @apply text-gray-800 text-[0.85rem];
+}
+
+/* CSS Classes */
+.search-input input::placeholder {
+    text-transform: none;
+}
+
+.search-autosuggestion ul {
+    scrollbar-width: thin;
+}
+
+.hourly-weather .weather-list {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.hourly-weather:hover .weather-list {
+    scrollbar-color: #bfbfbf transparent;
+}
+
+@tailwind utilities;

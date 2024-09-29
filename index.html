@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- linking Google fonts for icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+        
+    <link rel="stylesheet" href="./src/style.css">
+
+    <script src="./src/script.js" defer></script>
+</head>
+
+<body class="h-[100vh] w-[100vw] flex justify-center items-center bg-[#5f41e4] font-montserrat">
+
+    <div class="container max-w-[425px] bg-white rounded-xl shadow-2xl shadow-black">
+        
+        <!-- search section -->
+        <div class="search-section pt-[25px] px-[25px] flex items-center justify-center gap-2">
+            <div class="search relative w-[100%]">
+    
+                <span class="material-symbols-rounded absolute top-[50%] left-[17px] translate-y-[-50%] pointer-events-none"> search </span>
+
+                <div class="search-input relative pl-[50px] pr-[20px] flex items-center border-[1px] border-[#beb0ff] rounded-md">
+                    <input type="text" class="h-[54px] w-[100%] outline-none font-semibold uppercase" id="search-city" name="search-city" placeholder="Enter a city name" autocomplete="off">
+
+                    <div class="search-result-box w-full absolute top-[55px] left-0">
+                        <ul class="max-w-[310px] max-h-[180px] rounded-md border-[1px] border-[#beb0ff] overflow-y-auto overflow-x-hidden">
+                           <!-- here searched city list -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- location button for get direct weather from user device location -->
+            <div class="location-btn">
+                <button class="h-[54px] w-[54px] text-[#5f41e4] flex justify-center items-center border-[1px] border-[#beb0ff] rounded-md transition-all duration-200 ease-in hover:bg-[#5f41e4] hover:border-[#5f41e4] hover:text-white">
+                    <span class="material-symbols-rounded text-[1.3rem]"> my_location </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- weather detail section -->
+        <div class="weather-section mt-[18px]">
+            <!-- show current weather -->
+            <div class="current-weather my-[10px] flex flex-col justify-center items-center gap-[20px] ">
+                <div class="weather-icon">
+                    <img src="./src/icons/clouds.svg" class="w-[140px] aspect-[1]" draggable="false">
+                </div>
+                <div class="temperature font-bold text-6xl flex"> 00<span class="font-medium text-2xl content-start">°C</span> </div>
+                <div class="description text-xl font-semibold"> Weather description  </div>
+            </div>
+
+            <!-- Handling fetching API error. -->
+            <div class="no-results px-[25px] text-center flex flex-col justify-center items-center gap-[20px]">
+                <div class="no-result-icon">
+                    <img class="w-[140px]">
+                </div>
+
+                <div class="title font-bold text-xl"> <p> </p>  </div>
+
+                <div class="description font-medium w-[90%]">
+                    <p> </p>
+                </div>
+            </div>
+
+            <!-- show hourly weather list -->
+            <div class="hourly-weather w-[100%] mt-[20px] px-[18px] pt-[25px] border-t-[1px] border-t-[#d5ccff]">
+
+                <div class="weather-list flex gap-[40px]  overflow-x-auto">
+                   
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
